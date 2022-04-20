@@ -9,6 +9,7 @@ SELECT bill_invoice_id,
     line_item_usage_type,
     resource_tags_user_project,
     SUM(EC2_RUN_INSTANCE_HOURS) AS SUM_EC2_RUN_INSTANCE_HOURS,
+    SUM(pricing_public_on_demand_cost) AS pricing_public_on_demand_cost,
     SUM(EC2_RUN_INSTANCE_GROSS_COST) AS SUM_EC2_RUN_INSTANCE_GROSS_COST,
     SUM(EC2_RUN_INSTANCE_NET_COST) AS SUM_EC2_RUN_INSTANCE_NET_COST
 FROM (
