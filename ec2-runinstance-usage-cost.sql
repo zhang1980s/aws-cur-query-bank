@@ -47,6 +47,7 @@ FROM (
                 ) > 0 THEN 0
                 ELSE line_item_usage_amount
             END AS EC2_RUN_INSTANCE_HOURS,
+            pricing_public_on_demand_cost,
             CASE
                 WHEN POSITION('DiscountedUsage' IN line_item_line_item_type) > 0 THEN reservation_effective_cost
                 WHEN POSITION(
